@@ -12,6 +12,7 @@
         "doctrine/doctrine-bundle": "^2",
         "doctrine/doctrine-migrations-bundle": "^2",
         "doctrine/orm": "^2",
+        "lexik/jwt-authentication-bundle": "^2.10",
         "nelmio/cors-bundle": "^2.1",
         "phpdocumentor/reflection-docblock": "^5.2",
         "symfony/asset": "5.0.*",
@@ -29,7 +30,7 @@
         "symfony/yaml": "5.0.*"
     },
     "require-dev": {
-        "doctrine/doctrine-fixtures-bundle": "^3.3",
+        "doctrine/doctrine-fixtures-bundle": "^3.4",
         "fzaninotto/faker": "^1.9",
         "symfony/maker-bundle": "^1.17"
     },

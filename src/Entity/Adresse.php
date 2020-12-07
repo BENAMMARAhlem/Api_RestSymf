@@ -2,13 +2,17 @@
 
 namespace App\Entity;
 
+use App\Entity\Personne;
+use Doctrine\ORM\Mapping as ORM;
 use App\Repository\AdresseRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
-use Doctrine\ORM\Mapping as ORM;
+use ApiPlatform\Core\Annotation\ApiResource;
+use Symfony\Component\Serializer\Annotation\Groups;
 
 /**
  * @ORM\Entity(repositoryClass=AdresseRepository::class)
+ * @ApiResource()
  */
 class Adresse
 {
@@ -16,21 +20,25 @@ class Adresse
      * @ORM\Id()
      * @ORM\GeneratedValue()
      * @ORM\Column(type="integer")
+     * @Groups({"personne:read", "personne:write"})
      */
     private $id;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Groups({"personne:read", "personne:write"})
      */
     private $rue;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Groups({"personne:read", "personne:write"})
      */
     private $codePostal;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Groups({"personne:read", "personne:write"})
      */
     private $ville;
 
@@ -39,6 +47,7 @@ class Adresse
      */
     private $personnes;
 
+    
     public function __construct()
     {
         $this->personnes = new ArrayCollection();
