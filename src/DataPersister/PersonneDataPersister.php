@@ -1,8 +1,10 @@
+<?php
+
 namespace App\DataPersister;
 
 use App\Entity\Personne;
 use Doctrine\ORM\EntityManagerInterface;
-use ApiPlatform\Core\DataPersister\DataPersisterInterface
+use ApiPlatform\Core\DataPersister\DataPersisterInterface;
 
 class PersonneDataPersister implements DataPersisterInterface
 {
@@ -28,3 +30,4 @@ class PersonneDataPersister implements DataPersisterInterface
         $this->entityManager->flush();
     }
 }
+?>
